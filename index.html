@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spotify Business — Simulação</title>
+  <meta name="description" content="Simulação de conscientização — Spotify Business (tema escuro).">
+  <style>
+    :root{
+      --red:#c62828;
+      --green:#1DB954;
+      --bg-900:#050606;
+      --bg-800:#0b0d0e;
+      --card:#0f1415;
+      --muted:#a9b3b3;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,var(--bg-900) 0%, var(--bg-800) 100%);color:#e6f0ef;-webkit-font-smoothing:antialiased}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px}
+    .card{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(0,0,0,0.02));border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,0.7);padding:28px;border:1px solid var(--glass)}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo-like{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg, var(--green), #12a845);display:flex;align-items:center;justify-content:center;font-weight:800;color:#012018;font-size:18px;overflow:hidden}
+    .logo-like img{display:block;max-width:100%;height:auto;border-radius:10px}
+    h1{margin:8px 0 6px;font-size:24px;letter-spacing:0.2px;color:var(--red)}
+    p.lead{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+    .meta{margin-top:10px;color:#9fb3b1;font-size:13px}
+    .content-row{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.01));padding:16px;border-radius:10px;border:1px solid var(--glass);min-height:120px}
+    .tips{display:flex;flex-direction:column;gap:10px}
+    .tip{padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.01));border-left:4px solid rgba(255,255,255,0.02);color:var(--muted);font-size:14px}
+    .cta{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+    .btn-primary{display:inline-block;padding:12px 14px;border-radius:10px;background:var(--green);color:#012018;font-weight:700;text-decoration:none;text-align:center}
+    .btn-ghost{display:inline-block;padding:10px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none;text-align:center}
+    .sim-data{margin-top:18px;padding:14px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:14px}
+    .footer{margin-top:18px;color:#8e9b9a;font-size:13px}
+    small{color:#7f8c8b}
+    code{background:rgba(255,255,255,0.02);padding:2px 6px;border-radius:6px;color:#e6f0ef}
+    @media(max-width:920px){
+      .content-row{grid-template-columns:1fr;align-items:start}
+      .logo-like{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="spotfy-title">
+      <div class="brand">
+        <div class="logo-like" aria-hidden="true">
+          <img src="assets/spotify.png"
+       alt="Logo Spotify"
+       width="56" height="56"
+       style="display:block;border:none;outline:none;object-fit:contain;">
+          </div>
+        <div>
+          <div style="font-weight:700;color:#eaf6ef">Spotify Business</div>
+          <div style="color:var(--muted);font-size:13px">Programa de benefícios — Portal Corporativo</div>
+        </div>
+      </div>
+
+      <h1 id="spotfy-title">Alerta - você caiu em uma simulação de phishing</h1>
+
+      <p class="lead">Se você está vendo essa página, você caiu em um phishing. <strong>Observação:</strong> este link faz parte de uma simulação de conscientização promovida pela equipe de Segurança da Informação. Registramos apenas o clique — não coletamos senhas.</p>
+
+      <div class="content-row" role="region" aria-label="Informações e dicas">
+        <div class="panel">
+          <h3 style="margin:0 0 8px 0;color:#dff2e8;font-size:16px">O que você precisa saber</h3>
+          <div style="color:var(--muted);font-size:14px;line-height:1.45">
+            A maioria dos ataques tenta se passar por serviços ou benefícios legítimos. Antes de clicar, sempre:
+            <ul style="margin:10px 0 0 18px;color:var(--muted)">
+              <li>Verifique o domínio do remetente;</li>
+              <li>Passe o mouse sobre o link para ver o destino real;</li>
+              <li>Fuja de pressão por urgência;</li>
+              <li>Confirme via canal oficial (chat corporativo, RH ou telefone).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips" style="margin-top:16px">
+        <div class="tip"><strong>Verifique o remetente:</strong> o texto pode parecer oficial, mas o domínio é o que importa.</div>
+        <div class="tip"><strong>Cuidado com promessa:</strong> benefícios e brindes são iscas comuns.</div>
+        <div class="tip"><strong>Nunca informe senhas:</strong> empresas legítimas não pedem isso por e-mail.</div>
+      </div>
+
+      <div class="footer">
+        <small>Campanha autorizada pelo time de Segurança — objetivo: medir e reduzir cliques em iscas de phishing. <br>Se você entrou aqui por engano, siga as instruções do time de Segurança e reporte qualquer dúvida.</small>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
